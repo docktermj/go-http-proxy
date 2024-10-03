@@ -12,10 +12,16 @@ var (
 )
 
 // ----------------------------------------------------------------------------
+// Test interface functions
+// ----------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------
 // Internal functions
 // ----------------------------------------------------------------------------
 
 func getTestObject(ctx context.Context, test *testing.T) HttpProxyService {
+	_ = ctx
+	_ = test
 	if httpProxyServiceSingleton == nil {
 		httpProxyServiceSingleton = &BasicHttpProxyService{}
 	}
@@ -23,12 +29,9 @@ func getTestObject(ctx context.Context, test *testing.T) HttpProxyService {
 }
 
 func testError(test *testing.T, ctx context.Context, err error) {
+	_ = ctx
 	if err != nil {
 		test.Log("Error:", err.Error())
 		assert.FailNow(test, err.Error())
 	}
 }
-
-// ----------------------------------------------------------------------------
-// Test interface functions
-// ----------------------------------------------------------------------------

@@ -1,7 +1,5 @@
 name: Go test darwin
 
-on: [pull_request, workflow_dispatch]
-
 on: [push]
 
 permissions:
