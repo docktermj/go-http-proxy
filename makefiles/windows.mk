@@ -48,10 +48,6 @@ run-osarch-specific:
 
 .PHONY: setup-osarch-specific
 setup-osarch-specific:
-	@mkdir C:\Temp\sqlite
-	@copy testdata\sqlite\G2C.db C:\Temp\sqlite\G2C.db
-	@mkdir $(TARGET_DIRECTORY)\
-	@mkdir $(TARGET_DIRECTORY)\$(GO_OS)-$(GO_ARCH)
 
 
 .PHONY: test-osarch-specific
