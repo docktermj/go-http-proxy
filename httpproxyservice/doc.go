@@ -1,4 +1,4 @@
 /*
-One or two sentence synopsis of the package...
+Package httpproxyservice proxies an HTTP request.
 */
 package httpproxyservice
