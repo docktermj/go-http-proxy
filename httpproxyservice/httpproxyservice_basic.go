@@ -26,6 +26,8 @@ func (basicHttpProxyService *BasicHTTPProxyService) handleRequest(w http.Respons
 
 	// Create a new HTTP request to the proxied server with the same method and body as the original request.
 
+	fmt.Printf(">>>>>> %v", r)
+
 	proxyURL := fmt.Sprintf(basicHttpProxyService.ProxyTemplate, r.URL)
 	proxyReq, err := http.NewRequestWithContext(r.Context(), r.Method, proxyURL, r.Body)
 	if err != nil {
