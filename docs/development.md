@@ -13,7 +13,6 @@
     export GIT_REPOSITORY=go-http-proxy
     export GIT_ACCOUNT_DIR=~/${GIT_ACCOUNT}.git
     export GIT_REPOSITORY_DIR="${GIT_ACCOUNT_DIR}/${GIT_REPOSITORY}"
-
     ```
 
 1. Using the environment variables values just set, follow
@@ -27,7 +26,6 @@
     ```console
     cd ${GIT_REPOSITORY_DIR}
     make dependencies-for-development
-
     ```
 
 1. Install dependencies needed for [Go] code.
@@ -36,7 +34,6 @@
     ```console
     cd ${GIT_REPOSITORY_DIR}
     make dependencies
-
     ```
 
 ## Lint
@@ -47,7 +44,6 @@
     ```console
     cd ${GIT_REPOSITORY_DIR}
     make lint
-
     ```
 
 ## Build
@@ -58,7 +54,6 @@
     ```console
     cd ${GIT_REPOSITORY_DIR}
     make clean build
-
     ```
 
 1. The binaries will be found in the `${GIT_REPOSITORY_DIR}/target` directory.
@@ -66,7 +61,6 @@
 
     ```console
     tree ${GIT_REPOSITORY_DIR}/target
-
     ```
 
 ## Run
@@ -78,21 +72,18 @@
 
         ```console
         ${GIT_REPOSITORY_DIR}/target/linux-amd64/go-http-proxy
-
         ```
 
     1. macOS
 
         ```console
         ${GIT_REPOSITORY_DIR}/target/darwin-amd64/go-http-proxy
-
         ```
 
     1. Windows
 
         ```console
         ${GIT_REPOSITORY_DIR}/target/windows-amd64/go-http-proxy
-
         ```
 
 1. Clean up.
@@ -101,7 +92,6 @@
     ```console
     cd ${GIT_REPOSITORY_DIR}
     make clean
-
     ```
 
 ## Test
@@ -112,7 +102,6 @@
     ```console
     cd ${GIT_REPOSITORY_DIR}
     make clean setup test
-
     ```
 
 ## Coverage
@@ -125,7 +114,6 @@ Create a code coverage map.
     ```console
     cd ${GIT_REPOSITORY_DIR}
     make clean setup coverage
-
     ```
 
 ## Documentation
@@ -136,7 +124,6 @@ Create a code coverage map.
     ```console
     cd ${GIT_REPOSITORY_DIR}
     make clean documentation
-
     ```
 
 1. If a web page doesn't appear, visit [localhost:6060].
@@ -154,7 +141,6 @@ Example:
     ```console
     cd ${GIT_REPOSITORY_DIR}
     make clean
-
     ```
 
 ## References

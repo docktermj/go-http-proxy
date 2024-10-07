@@ -15,6 +15,14 @@ var (
 // Test interface functions
 // ----------------------------------------------------------------------------
 
+func TestBasicHTTPProxyService(test *testing.T) {
+	ctx := context.TODO()
+	httpProxyService := getTestObject(ctx, test)
+	_ = httpProxyService.Handler(ctx)
+	testError(ctx, test, nil)
+
+}
+
 // ----------------------------------------------------------------------------
 // Internal functions
 // ----------------------------------------------------------------------------
