@@ -26,7 +26,7 @@ func (basicHttpProxyService *BasicHTTPProxyService) handleRequest(w http.Respons
 
 	// Create a new HTTP request to the proxied server with the same method and body as the original request.
 
-	fmt.Printf(">>>>>> %v\n\n", r)
+	fmt.Printf("\n\n>>>>>>\n%v\n\n", r)
 
 	proxyURL := fmt.Sprintf(basicHttpProxyService.ProxyTemplate, r.URL)
 	proxyReq, err := http.NewRequestWithContext(r.Context(), r.Method, proxyURL, r.Body)
@@ -57,7 +57,7 @@ func (basicHttpProxyService *BasicHTTPProxyService) handleRequest(w http.Respons
 		}
 	}()
 
-	fmt.Printf("<<<<<< %v\n\n", resp)
+	fmt.Printf("\n\n<<<<<<\n%v\n\n", resp)
 
 	// Copy the headers from the proxy response to the original response.
 
