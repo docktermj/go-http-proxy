@@ -4,6 +4,6 @@ package httpproxyservice
 // Types
 // ----------------------------------------------------------------------------
 
-// The HttpProxyService interface is...
-type HttpProxyService interface {
+// The HTTPProxyService interface is...
+type HTTPProxyService interface {
 }

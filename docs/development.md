@@ -140,8 +140,8 @@ Create a code coverage map.
     ```
 
 1. If a web page doesn't appear, visit [localhost:6060].
-1. Senzing documentation will be in the "Third party" section.
-   `github.com` > `senzing-garage` > `template-go`
+1. Documentation will be in the "Third party" section.
+   `github.com` > `docktermj` > `go-http-proxy`
 
 1. When a versioned release is published with a `v0.0.0` format tag,
 the reference can be found by clicking on the following badge at the top of the README.md page.
@@ -159,13 +159,8 @@ Example:
 
 ## References
 
-[clone-repository]: https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/clone-repository.md
-[docker]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker.md
-[git]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/git.md
-[Go Reference Badge]: https://pkg.go.dev/badge/github.com/senzing-garage/template-go.svg
-[Go Reference]: https://pkg.go.dev/github.com/senzing-garage/template-go
-[go]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/go.md
-[How to Install Senzing for Go Development]: https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/install-senzing-for-go-development.md
-[localhost:6060]: http://localhost:6060/pkg/github.com/senzing-garage/template-go/
-[make]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/make.md
-[testcoverage.yaml]: ../.github/coverage/testcoverage.yaml
+[clone-repository]: https://github.com/docktermj/knowledge-base/blob/main/HOWTO/clone-repository.md
+[Go Reference Badge]: https://pkg.go.dev/badge/github.com/docktermj/template-go.svg
+[Go Reference]: https://pkg.go.dev/github.com/docktermj/template-go
+[go]: https://github.com/docktermj/knowledge-base/blob/main/WHATIS/go.md
+[localhost:6060]: http://localhost:6060/pkg/github.com/docktermj/template-go/

@@ -8,7 +8,7 @@ import (
 )
 
 var (
-	httpProxyServiceSingleton HttpProxyService
+	httpProxyServiceSingleton HTTPProxyService
 )
 
 // ----------------------------------------------------------------------------
@@ -19,16 +19,16 @@ var (
 // Internal functions
 // ----------------------------------------------------------------------------
 
-func getTestObject(ctx context.Context, test *testing.T) HttpProxyService {
+func getTestObject(ctx context.Context, test *testing.T) HTTPProxyService {
 	_ = ctx
 	_ = test
 	if httpProxyServiceSingleton == nil {
-		httpProxyServiceSingleton = &BasicHttpProxyService{}
+		httpProxyServiceSingleton = &BasicHTTPProxyService{}
 	}
 	return httpProxyServiceSingleton
 }
 
-func testError(test *testing.T, ctx context.Context, err error) {
+func testError(ctx context.Context, test *testing.T, err error) {
 	_ = ctx
 	if err != nil {
 		test.Log("Error:", err.Error())

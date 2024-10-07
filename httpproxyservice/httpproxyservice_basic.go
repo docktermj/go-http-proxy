@@ -11,8 +11,8 @@ import (
 // Types
 // ----------------------------------------------------------------------------
 
-// BasicHttpProxyService is...
-type BasicHttpProxyService struct {
+// BasicHTTPProxyService is...
+type BasicHTTPProxyService struct {
 	ProxyTemplate   string
 	CustomTransport http.RoundTripper
 }
@@ -22,12 +22,12 @@ type BasicHttpProxyService struct {
 // ----------------------------------------------------------------------------
 
 // Handle an HTTP request
-func (basicHttpProxyService *BasicHttpProxyService) handleRequest(w http.ResponseWriter, r *http.Request) {
+func (basicHttpProxyService *BasicHTTPProxyService) handleRequest(w http.ResponseWriter, r *http.Request) {
 
 	// Create a new HTTP request to the proxied server with the same method and body as the original request.
 
-	proxyUrl := fmt.Sprintf(basicHttpProxyService.ProxyTemplate, r.URL)
-	proxyReq, err := http.NewRequest(r.Method, proxyUrl, r.Body)
+	proxyURL := fmt.Sprintf(basicHttpProxyService.ProxyTemplate, r.URL)
+	proxyReq, err := http.NewRequestWithContext(r.Context(), r.Method, proxyURL, r.Body)
 	if err != nil {
 		http.Error(w, "Error creating proxy request", http.StatusInternalServerError)
 		return
@@ -80,7 +80,8 @@ func (basicHttpProxyService *BasicHttpProxyService) handleRequest(w http.Respons
 // Public methods
 // ----------------------------------------------------------------------------
 
-func (basicHttpProxyService *BasicHttpProxyService) Handler(ctx context.Context) *http.ServeMux {
+func (basicHttpProxyService *BasicHTTPProxyService) Handler(ctx context.Context) *http.ServeMux {
+	_ = ctx
 
 	// Proxy HTTP requests.
 
