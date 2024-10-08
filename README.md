@@ -1,5 +1,7 @@
 # go-http-proxy
 
+Deprecated.
+
 ## Synopsis
 
 Module `go-http-proxy`...
@@ -14,6 +16,9 @@ Module `go-http-proxy`...
 [![golangci-lint.yaml Badge]][golangci-lint.yaml]
 
 ## Overview
+
+See [The Right Use of ‘ReverseProxy’ in Golang](https://blog.joshsoftware.com/2021/05/25/simple-and-powerful-reverseproxy-in-go/)
+for information on using Golang's `httputil.ReverseProxy`.
 
 ## Use
 
